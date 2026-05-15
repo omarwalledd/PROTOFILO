@@ -1,0 +1,360 @@
+/* إعدادات عامة وألوان */
+:root {
+    --bg-main: #0a192f;
+    --bg-darker: #020c1b;
+    --accent: #64ffda;
+    --text-main: #ccd6f6;
+    --text-sec: #8892b0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    overflow-x: hidden;
+}
+
+/* شريط التنقل */
+nav {
+    position: fixed;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 25, 47, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav .nav-links a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: var(--accent);
+}
+
+/* الهيرو والبارتكلز */
+#home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.profile-img-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(45deg, var(--accent), #3a7bd5);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--bg-main);
+}
+
+h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: var(--text-sec);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    padding: 12px 30px;
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+/* الأقسام العامة */
+.section-padding {
+    padding: 100px 10%;
+}
+
+.bg-darker {
+    background-color: var(--bg-darker);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #fff;
+    text-align: center;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent);
+    margin: 10px auto 0;
+}
+
+/* About Section */
+.about-grid {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-sec);
+}
+
+.education-cards {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateX(10px);
+}
+
+.card i {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: var(--text-sec);
+    font-size: 0.9rem;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.skill-box:hover {
+    background: rgba(100, 255, 218, 0.05);
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.skill-box i {
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+/* Projects Section */
+.project-showcase {
+    display: flex;
+    background: var(--bg-darker);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.project-img {
+    flex: 1.5;
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.project-img:hover img {
+    transform: scale(1.05);
+}
+
+.project-details {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-details h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.project-details p {
+    color: var(--text-sec);
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-family: monospace;
+    background: rgba(100, 255, 218, 0.1);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Footer / Contact */
+footer {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background: var(--bg-darker);
+}
+
+footer h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: var(--text-sec);
+    margin-bottom: 30px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.social-links a {
+    color: var(--text-main);
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    font-family: monospace;
+}
+
+/* الأنيميشن عند السكرول */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* التجاوب مع الموبايل */
+@media (max-width: 768px) {
+    .about-grid, .project-showcase {
+        flex-direction: column;
+    }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.5rem; }
+    nav { padding: 15px 20px; }
+    nav .nav-links { display: none; } /* ممكن تتطور لـ Hamburger menu بعدين */
+}
